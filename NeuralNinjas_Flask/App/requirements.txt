@@ -1,0 +1,6 @@
+# python.exe -m pip install --upgrade pip
+flask
+requests 
+pyPDF2
+pycryptodome
+requests

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MedicAI Result</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+
+<body>
+    <header>
+        <img src="../static/images/cardiogram.png" alt="Medical Symbol">
+        <a href='/'>
+            <h1>MedicAI</h1>
+        </a>
+        <img src="../static/images/Aventus.png" alt="Aventus Logo">
+    </header>
+    <div id="main">
+        <h2>Here's what MedicAI says:</h2>
+        <textarea name="completion" readonly placeholder="The model will respond soon!" >{{answer}}</textarea>
+        <div id="buttons">
+            <a href="/"><button class="regularbutton">Return Home</button></a>
+            <a href="/showInterface"><button class="regularbutton">Ask Another Question</button></a>
+        </div>
+    </div>
+    <footer>
+        <p>MedicAI</p>
+        <p>Neural Ninjas @Aventus 2.0</p>
+    </footer>
+</body>
+
+</html>

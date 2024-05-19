@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <title>Talk to MedicAI</title>
+</head>
+
+<body>
+    <header>
+        <img src="../static/images/cardiogram.png" alt="Medical Symbol">
+        <a href='/'>
+            <h1>MedicAI</h1>
+        </a>
+        <img src="../static/images/Aventus.png" alt="Aventus Logo">
+    </header>
+    <div class="main">
+        <div id="form-div">
+            <h2>Medical Information Form</h2>
+            <form id="textForm" action="/submitform" method="post">
+                <div class="form-group">
+                    <label for="symptoms">Symptoms <span>*required</span></label>
+                    <textarea id="symptoms" name="symptoms" rows="4"
+                        placeholder="Describe your symptoms...eg.'I have a sore throat'" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="family_history">Family History</label>
+                    <textarea id="family_history" name="family_history" rows="4"
+                        placeholder="Describe your family medical history...eg.'My mother's family has a history of diabetes'"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="social_history">Social History</label>
+                    <textarea id="social_history" name="social_history" rows="4"
+                        placeholder="Describe your social history...eg.'I am a college professor living a sedentary lifestyle. I do not drink but I do smoke occasionally'"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="diagnosis">Diagnosis</label>
+                    <textarea id="diagnosis" name="diagnosis" rows="4"
+                        placeholder="List any known diagnosis...eg.'Tuberculosis, COVID-19'"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="recent_surgeries">Recent Surgeries</label>
+                    <textarea id="recent_surgeries" name="recent_surgeries" rows="4"
+                        placeholder="List any recent surgeries...eg.'I underwent open-heart surgery to get a stent'"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="medications">Medications</label>
+                    <textarea id="medications" name="medications" rows="4"
+                        placeholder="List your current medications...eg.'Naproxen 500 mg PRN for pain'"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="allergies">Allergies</label>
+                    <textarea id="allergies" name="allergies" rows="4"
+                        placeholder="List any allergies...eg.'I am allergic to walnuts and dairy products'"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="physical_exam">Physical Examinations</label>
+                    <textarea id="physical_exam" name="physical_exam" rows="4"
+                        placeholder="List any results of physical examinations...eg.'BP 140/90 mmHg, HR 80 bpm, RR 16/min, Temp 98.6°F'"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <div id="pdf-div">
+            <h2>Medical PDF Upload</h2>
+            <form id="pdfForm" action="/submitpdf" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="pdf">Upload Medical PDF File: <span>*required</span></label>
+                    <input type="file" id="pdf" name="pdf" accept=".pdf" required></input>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <div id="loading">
+            <img src="../static/images/cardiogram.png" alt="Loading...">
+            <p>This may take a while...</p>
+        </div>
+        <div id="toggle-btn">
+            <button id="toggle">Upload a medical report instead!</button>
+        </div>
+    </div>
+    <footer>
+        <p>MedicAI</p>
+        <p>Neural Ninjas @Aventus 2.0</p>
+    </footer>
+    <script src="../static/js/input.js"></script>
+</body>
+
+</html>
